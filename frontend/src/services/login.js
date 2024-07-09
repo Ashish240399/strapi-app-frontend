@@ -15,9 +15,9 @@ export const loginUser = async (identifier, password) => {
       }
     );
     console.log("User logged in:", response.data);
-    return response.data;
+    return response;
   } catch (error) {
-    console.error("Error logging in user:", error);
-    throw error;
+    console.error("Error logging in user:", error.response);
+    return error.response;
   }
 };

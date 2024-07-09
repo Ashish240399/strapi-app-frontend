@@ -1,0 +1,110 @@
+/* Base styles for all devices */
+.register-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-container > div {
+  height: auto;
+  width: 25vw;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.301);
+  padding: 2vw;
+  border-radius: 0.5vw;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8vw;
+}
+.form-group > label {
+  font-size: small;
+}
+.form-group > input {
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.351);
+  border-radius: 6px;
+}
+.form-group > input:focus {
+  outline: none;
+}
+form > button {
+  background-color: rgb(14, 122, 255);
+  border-radius: 6px;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: medium;
+  margin-top: 4%;
+  cursor: pointer;
+}
+.small-blue-text {
+  color: rgb(14, 122, 255);
+  font-size: small;
+}
+.credential-error {
+  color: red;
+  font-size: small;
+  text-align: right;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  .register-container > div {
+    width: 30vw;
+  }
+
+  .form-group {
+    padding-bottom: 1vw;
+  }
+
+  form > button {
+    font-size: large;
+    padding: 12px;
+  }
+}
+
+/* Styles for laptops and desktops */
+@media (min-width: 1024px) {
+  .register-container > div {
+    width: 25vw;
+  }
+
+  .form-group {
+    padding-bottom: 1vw;
+  }
+
+  form > button {
+    font-size: large;
+    padding: 12px;
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+  .register-container > div {
+    width: 90vw;
+    padding: 4vw;
+    border-radius: 2vw;
+  }
+
+  .form-group {
+    padding-bottom: 2vw;
+  }
+
+  .form-group > label {
+    font-size: medium;
+  }
+
+  .form-group > input {
+    padding: 12px;
+  }
+
+  form > button {
+    font-size: medium;
+    padding: 12px;
+  }
+}
