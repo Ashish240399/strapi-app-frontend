@@ -131,6 +131,7 @@
 @media (max-width: 767px) {
   .chat-page-container {
     width: 95%;
+    max-height: 97vh;
   }
 
   .chat-nav {
