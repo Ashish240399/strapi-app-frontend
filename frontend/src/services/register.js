@@ -3,7 +3,7 @@ import axios from "axios";
 export const registerUser = async (username, email, password) => {
   try {
     const response = await axios.post(
-      "http://localhost:1337/api/auth/local/register",
+      "https://stable-apparel-284362d0ca.strapiapp.com/api/auth/local/register",
       {
         username: username,
         email: email,

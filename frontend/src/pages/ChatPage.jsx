@@ -6,7 +6,7 @@ import { IoSend } from "react-icons/io5";
 import { logoutUser } from "../services/logout";
 import { useNavigate } from "react-router-dom";
 
-const socket = io("http://localhost:1337");
+const socket = io("https://stable-apparel-284362d0ca.strapiapp.com");
 
 const ChatPage = () => {
   const navigate = useNavigate();
@@ -42,6 +42,8 @@ const ChatPage = () => {
     const response = await getMessagesForUser(user.id, jwt);
     if (response.status === 200) {
       setChat(response.data);
+    } else {
+      logout();
     }
   }
 
@@ -53,7 +55,10 @@ const ChatPage = () => {
     };
     console.log("Sending message:", messageData);
     socket.emit("message", messageData);
-    setChat((prev) => [...prev, messageData]);
+    setChat((prev) => [
+      ...prev,
+      { ...messageData, createdAt: formatDateTime(new Date()) },
+    ]);
     setMessage("");
   };
 

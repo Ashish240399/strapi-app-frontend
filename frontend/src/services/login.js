@@ -3,7 +3,7 @@ import axios from "axios";
 export const loginUser = async (identifier, password) => {
   try {
     const response = await axios.post(
-      "http://localhost:1337/api/auth/local",
+      "https://stable-apparel-284362d0ca.strapiapp.com/api/auth/local",
       {
         identifier: identifier,
         password: password,

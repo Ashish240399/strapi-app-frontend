@@ -3,7 +3,7 @@ import axios from "axios";
 export const getMessagesForUser = async (senderId, jwt) => {
   try {
     const response = await axios.get(
-      `http://localhost:1337/api/chat_messages/sender`,
+      `https://stable-apparel-284362d0ca.strapiapp.com/api/chat_messages/sender`,
       {
         params: {
           senderId: senderId,
